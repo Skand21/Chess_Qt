@@ -29,7 +29,7 @@ public:
     QList <ChessPiece *> alivePiece;
 
     // Для вывода на экран
-    // Сделатьотдельным методом
+    // Сделатьотдельным классом
     void displayMainMenu();
     void displayGameEnd(QString winner);
 

@@ -4,7 +4,6 @@
 Game *game;
 int main(int argc, char *argv[])
 {
-
     QApplication aplic(argc, argv);
     game = new Game();
     game->show(); // Показываем окно

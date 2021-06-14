@@ -31,7 +31,7 @@ public:
     ChessPiece * currentPiece;
 
 private:
-    QBrush brush;
+    QBrush brush; // Дя окрашивания
     QColor originalColor;
     bool hasChessPiece;
     QString chessPieceColor;

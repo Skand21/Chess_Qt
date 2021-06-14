@@ -1,12 +1,12 @@
 #include "fd_chessBox.h"
 #include "game.h"
 #include "piece_king.h"
-#include <QDebug>
+
 extern Game *game;
 ChessBox::ChessBox(QGraphicsItem *parent):QGraphicsRectItem(parent)
 {
-    // Создаём поле 100*100
-    setRect(0,0,100,100);
+    // Создаём cells 100*100
+    setRect(0,0,100, 100);
     setHasChessPiece(false);
 }
 
@@ -21,7 +21,7 @@ void ChessBox::mousePressEvent(QGraphicsSceneMouseEvent *event)
         // Если выбрано
         if(game->pieceToMove){
 
-            //removing the eaten piece
+            // Съедение фигуры
             QList <ChessBox *> movLoc = game->pieceToMove->moveLocation();
             // Убеждаемся, что варианты хода назодятся в допустимом пределе
             int check = 0;
@@ -29,7 +29,7 @@ void ChessBox::mousePressEvent(QGraphicsSceneMouseEvent *event)
                 if(movLoc[i] == this)
                     check = 1;
             }
-            // Если нажали на место, в которое нельзя ходить
+            // Если нажали на место, в которое нельзя сходить
             if(check == 0)
                 return;
 

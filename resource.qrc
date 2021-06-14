@@ -12,6 +12,5 @@
         <file>Pices/queen1.png</file>
         <file>Pices/rook.png</file>
         <file>Pices/rook1.png</file>
-        <file>Wallpaper.png</file>
     </qresource>
 </RCC>

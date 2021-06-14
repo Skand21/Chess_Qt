@@ -140,6 +140,7 @@ void Game::displayGameEnd(QString winner)
     connect(playButton,SIGNAL(clicked()) , this , SLOT(gameEnd())); // по нажатии на кнопку вызывает gameEnd()
     addToScene(playButton); // Добавляем на сцену
 }
+
 void Game::gameEnd()
 {
     exit(EXIT_FAILURE);
